@@ -268,7 +268,10 @@ class GameOptions:
 # Main
 def main():
 
-    #colorama.init()
+    if sys.stdout.isatty() is False:
+        colorama.init(convert=False, strip=False)
+    else:
+        colorama.init(convert=True)
 
     logging.basicConfig(level = logging.WARNING)
 
@@ -304,12 +307,13 @@ def main():
 
         # Print the game logo
         print(GameOptions.COLOUR_LOGO + "-" * TITLE_WIDTH + GameOptions.COLOUR_TEXT)
-        print(GameOptions.COLOUR_LOGO + ")   S O N A R   (".center(TITLE_WIDTH, "-") + GameOptions.COLOUR_TEXT)
+        kwutils.type(GameOptions.COLOUR_LOGO + ")   S O N A R   (".center(TITLE_WIDTH, "-") + GameOptions.COLOUR_TEXT)
         print(GameOptions.COLOUR_LOGO + "-" * TITLE_WIDTH + GameOptions.COLOUR_TEXT)
 
-        print("%i Levels loaded." % len(levels))
-        print("Place sonar detectors in the sea to find all of the treasure!")
-        print("The value on a detector indicates how far away from an object it is.\n")
+        kwutils.type("%i Levels loaded." % len(levels))
+        kwutils.type("Place sonar detectors in the sea to find all of the treasure!")
+        kwutils.type("The value on a detector indicates how far away from an object it is.\n")
+
         high_score_table.print()
 
         time.sleep(2)
