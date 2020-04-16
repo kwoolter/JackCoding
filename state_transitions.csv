@@ -2,10 +2,21 @@ Current state,Input,Next State,Output
 1,Ignore the rabbit,2,The rabbit looks hungry
 1,Feed the rabbit,2,The rabbit stops gnawing at its cage
 1,Let the rabbit run around,4,The rabbit runs around and then escapes
-2,Put on some loud music,3,The rabbit hates this
+2,Put on some loud music,6,The rabbit hates this
 2,Play Nintendo on the sofa,4,The rabbit jumps off�chaos
 3,Drink some wine,10,The rabbit ignores you but you do not care
 4,Try and catch the rabbit,5,After 10 minutes of running around you catch it
 4,Coax the rabbit back into its cage with a carrot,5,A fresh carrot does the job
 4,Coax the rabbit back into its cage with a big stick,5,You brandish a big stick and scream
 5,Do nothing,2,Relax
+2,Watch some TV,6,The rabbit ignores you but you do not care
+2,Play Minecraft,6,The rabbit ignores you but you do not care
+2,Do some coding,6,The rabbit ignores you but you do not care
+2,Take the paddle board down to the beach,6,Rabbits cannot swim!
+6,pour yourself a Gweilo,3,The rabbit ignores you but you do not care
+6,pour yourself a cider,3,The rabbit ignores you but you do not care
+6,eat some Dorritos,3,"Mmmm"
+3,Eat main course,3,Good work
+3,Skip main course and eat chocloate,3,You are not allowed to do this
+3,Complain about what is on offer and eat nothing,9,Mum explodes!
+9,Sleep,10,Zzzzz
