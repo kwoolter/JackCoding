@@ -1,11 +1,13 @@
 ID,Name,Description
-1,Day 1 morning,Monday morning
+0,Day 1 morning,Monday morning
 2,Day 1 lunch time,Lunchtime on Monday
 3,Day 1 Evening,Evening on Monday
 4,Emergency! Escaped rabbit,The rabbit has escaped
 5,Rabbit is back in its cage,Whew
 10,Day 2 morning,Tuesday morning
 11,Day 2 lunch time,Lunchtime on Tuesday
-12,Day 2 Evening,Evening on Tuesday
-6,Beer o'clock!,Time to go to the fridge and choose a beverage
+12,Day 2 BEER O'CLOCK!, BEER O'CLOCK
+13,Day 2 Vet, Vet! you are at the vet
+14,Day 2 Soaked, 14:00 Tuesday
+6,Beer o'clock!,BEER O'CLOCK! Time to go to the fridge and choose a snack
 9,Bedtime,Curl up in bed and sleep

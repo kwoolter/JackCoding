@@ -37,11 +37,17 @@ class StateTransitionFactory:
                 input_name = row.get("Input")
                 next_state = int(row.get("Next State"))
                 output_name = row.get("Output")
+                happiness = int(row.get("happiness"))
+                health = int(row.get("health"))
+                hunger = int(row.get("hunger"))
+                money = int(row.get("money"))
+                your_health = int(row.get("money"))
+
 
                 if current_state not in self._state_transitions.keys():
                     self._state_transitions[current_state] = {}
 
-                self._state_transitions[current_state][input_name] = (next_state, output_name)
+                self._state_transitions[current_state][input_name] = (next_state, output_name, happiness, health, hunger, money, your_health)
 
                 #logging.info("%s.load(): Loaded Location %i. %s", __class__, new_state.id, new_state.name)
 
@@ -166,6 +172,10 @@ def pick(object_type: str, objects: list, auto_pick: bool=False):
 from pathlib import Path
 
 def main():
+    print("It is your job to look after Honey Bunny for a week.")
+    x = input()
+    print("If she is happy when I get back you will get a nice reward!")
+    x=input()
 
     file_name = Path("./")
 
@@ -176,17 +186,25 @@ def main():
     # Load in teh state transitions
     state_transitions = StateTransitionFactory(file_name / "state_transitions.csv")
     state_transitions.load()
-    state_transitions.print()
+    #state_transitions.print()
 
     # Start from state 1
-    current_state_id = 1
+    current_state_id = 0
+    total_happiness = 50
+    total_hunger = 10
+    total_health = 100
+    total_money = 1000
+    total_your_health = 100
     loop = True
 
-    while loop == True:
+    while loop is True:
 
         # Print the details of the current state
         current_state = states.get_state(current_state_id)
-        print("Current state:{0}".format(str(current_state)))
+        print("{0}".format(str(current_state.description)))
+        if current_state_id % 10 == 0:
+            print("happiness: {0}\nhealth: {1}\nhunger: {2}\nmoney: {3}\nyour health: {4}".format(total_happiness, total_health, total_hunger, total_money, total_your_health))
+        x=input()
 
         # What are the available options from the current state?
         available_inputs = state_transitions.get_transitions_for_state(current_state_id)
@@ -203,20 +221,30 @@ def main():
             #     print("Input {0}: Next state {1}, output {2}".format(key, next_state, output))
 
             # Present valid list of inputs and ask user to pick one
-            result = pick("Input",list(available_inputs.keys()))
+            result = pick("Input",list(available_inputs.keys()),auto_pick=True)
 
             if result is not None:
 
                 # Change state
-                current_state_id, output = available_inputs[result]
+                current_state_id, output, happiness,  health, hunger, money, your_health = available_inputs[result]
+                total_happiness+=happiness
+                total_health+=health
+                total_hunger+=hunger
+                total_money+=money
+                total_your_health+=your_health
+
 
                 # Print selection and output
                 print("You {0}".format(result))
+                x=input()
                 print("{0}".format(output))
 
             else:
                 print("Bye bye")
                 loop = False
+
+        x=input()
+
 
 
 if __name__ == "__main__":
