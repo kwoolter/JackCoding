@@ -1,8 +1,11 @@
 Current state,Input,Next State,Output
-1,1,2,Hello World
-1,2,3,Option 2
-1,3,5,Option 3
-2,1,5,onwards to state 5
-2,2,4,onwards to state 4
-3,1,4,onwards to state 4
-4,1,5,Go to 5
+1,Ignore the rabbit,2,The rabbit looks hungry
+1,Feed the rabbit,2,The rabbit stops gnawing at its cage
+1,Let the rabbit run around,4,The rabbit runs around and then escapes
+2,Put on some loud music,3,The rabbit hates this
+2,Play Nintendo on the sofa,4,The rabbit jumps off�chaos
+3,Drink some wine,10,The rabbit ignores you but you do not care
+4,Try and catch the rabbit,5,After 10 minutes of running around you catch it
+4,Coax the rabbit back into its cage with a carrot,5,A fresh carrot does the job
+4,Coax the rabbit back into its cage with a big stick,5,You brandish a big stick and scream
+5,Do nothing,2,Relax
