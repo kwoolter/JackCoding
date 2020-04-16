@@ -1,0 +1,8 @@
+Current state,Input,Next State,Output
+1,1,2,Hello World
+1,2,3,Option 2
+1,3,5,Option 3
+2,1,5,onwards to state 5
+2,2,4,onwards to state 4
+3,1,4,onwards to state 4
+4,1,5,Go to 5
