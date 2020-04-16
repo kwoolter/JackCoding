@@ -1,4 +1,3 @@
-import logging
 import csv
 
 class State():
@@ -92,7 +91,6 @@ class StateFactory():
 
                 self._states[new_state.id] = new_state
 
-                logging.info("%s.load(): Loaded Location %i. %s", __class__, new_state.id, new_state.name)
 
     # Returns the location with the specified ID
     def get_state(self, id):
@@ -155,7 +153,6 @@ def pick(object_type: str, objects: list, auto_pick: bool=False):
 
             if 0 < choice <= choices:
                 selected_object = objects[choice -1]
-                logging.info("pick(): You chose %s %s." % (object_type, str(selected_object)))
             elif choice == (choices + 1):
                 raise (Exception("You cancelled. No %s selected" % object_type))
             else:
@@ -165,47 +162,48 @@ def pick(object_type: str, objects: list, auto_pick: bool=False):
 
     return selected_object
 
+
 from pathlib import Path
-import FSM
 
 def main():
 
-    print("Hello World")
+    file_name = Path("./")
 
-    file_name = Path("./FSM/")
-
-    states = FSM.StateFactory(file_name / "states.csv")
+    # Load in all of the states
+    states = StateFactory(file_name / "states.csv")
     states.load()
-    states.print()
 
-    state_transitions = FSM.StateTransitionFactory(file_name / "state_transitions.csv")
+    # Load in teh state transitions
+    state_transitions = StateTransitionFactory(file_name / "state_transitions.csv")
     state_transitions.load()
     state_transitions.print()
 
+    # Start from state 1
     current_state_id = 1
-
     loop = True
 
     while loop == True:
 
+        # Print the details of the current state
         current_state = states.get_state(current_state_id)
         print("Current state:{0}".format(str(current_state)))
 
         # What are the available options from the current state?
         available_inputs = state_transitions.get_transitions_for_state(current_state_id)
 
-        # If there are no options then we have reached an end state
+        # If there are no options then we have reached an end state so time to finish
         if available_inputs is None:
             loop = False
 
+        # Otherwise...
         else:
 
             # for key, value in available_inputs.items():
             #     next_state, output = value
             #     print("Input {0}: Next state {1}, output {2}".format(key, next_state, output))
 
-            # Otherwise present inputs
-            result = FSM.pick("Input",list(available_inputs.keys()))
+            # Present valid list of inputs and ask user to pick one
+            result = pick("Input",list(available_inputs.keys()))
 
             if result is not None:
 
