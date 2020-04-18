@@ -172,6 +172,7 @@ def pick(object_type: str, objects: list, auto_pick: bool=False):
 from pathlib import Path
 
 def main():
+
     print("It is your job to look after Honey Bunny for a week.")
     x = input()
     print("If she is happy when I get back you will get a nice reward!")
@@ -196,13 +197,13 @@ def main():
     total_money = 1000
     total_your_health = 100
     loop = True
-
+    score_states=[0, 10,16]
     while loop is True:
 
         # Print the details of the current state
         current_state = states.get_state(current_state_id)
         print("{0}".format(str(current_state.description)))
-        if current_state_id % 10 == 0:
+        if current_state_id in score_states:
             print("happiness: {0}\nhealth: {1}\nhunger: {2}\nmoney: {3}\nyour health: {4}".format(total_happiness, total_health, total_hunger, total_money, total_your_health))
         x=input()
 

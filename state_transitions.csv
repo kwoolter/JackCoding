@@ -22,12 +22,20 @@ Current state,Input,Next State,Output,happiness,health,hunger,money,your_health
 3,Complain about what is on offer and eat nothing,9,Mum explodes!,0,0,0,0,-30
 9,Sleep,10,Zzzzz,0,0,0,0,20
 9,Don't Sleep instead pull an all-nighter looking after Honey,10, You are very tired but it was worth it Honey flopped 10 times!!!,25,0,0,0,-25
-10,Go dragon boating,14,you head down to the beach and join your team. While you are out the boat capsizes!,-10,0,20,0,-5
+10,Go dragon boating,14,you head down to the beach and join your team. While you are out the boat capsizes!,-10,0,30,0,-5
 10,Go to sleep until 12:00,11,Zzzzz,-10,0,20,0,0
 10,Feed Honey,11, She chews quite loudly!,5,0,-25,0,0
 11,Go Kayaking with The Rabbit; she goes in a clear drybag,13, you and Honey head out to sea! She falls in and your 'dry' bag doesn't work. Time to go to the vet!,-25,-50,0,0,0
 11,Share an apple with honey,12, honey loves sharing the apple with you!,34,0,-20,0,10
 11,Open a bottle of wine,12, you alcoholic!,0,0,0,0,-10
 11,Feed honey crisps (you like them why can't she?),13, Honey chokes on the crisp; time to go the the vet!,-25,-50,0,0,0
-13,pay £334 to make honey better,12,honey didn't like it much but she is good-as-new!,-30,0,0,-334,0
+13,pay £334 to make honey better,12,honey didn't like it much but she is good-as-new!,-30,12,0,-334,0
 13,don't pay the bill you don't have enough money,66,honey died,-30,-999,0,0,0
+12,get honey out,15,honey runs around for a while doing lots of binkies ,15,0,0,0,0
+12,eat doritos,15,mmm,-5,0,0,0,25
+12,pour yourself a cider,15,soo good.... (alcoholic),-5,0,0,0,-10
+14,feed honey (you haven't fed her all day!,12,she looks happy after waiting the whole day!,5,0,-10,0,0
+14,have a shower you need to clean up after the capsize,12,honey is dying to eat,-10,-15,20,0,0
+15,eat main course,16,it was tasty,0,0,10,0,0
+15,feed honey instead of yourelf,16,she looks overjoyed,20,0,-30,0,0
+15,have a beer for dinner,16,…..(alcoholic),-10,0,10,0,-10
