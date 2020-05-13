@@ -4,7 +4,7 @@ Current state,Input,Next State,Output,happiness,health,hunger,money,your_health
 2,Let the rabbit run around,6,The rabbit runs around and then escapes,10,0,20,0,0
 0,Put on some loud music,2,The rabbit hates this,-25,0,0,0,0
 0,Play Nintendo on the sofa (with honey),4,The rabbit jumps off; chaos!,10,0,0,0,0
-0,Drink some wine,10,The rabbit ignores you but you do not care,0,0,0,0,0
+0,Drink some wine,2,The rabbit ignores you but you do not care,0,0,0,0,-10
 4,Try and catch the rabbit,2,After 10 minutes of running around you catch it,-15,0,0,0,0
 4,Coax the rabbit back into its cage with a carrot,2,A fresh carrot does the job,0,0,-10,0,0
 4,Coax the rabbit back into its cage with a big stick,2,You brandish a big stick (accidently poke honey) and scream,-15,-5,0,0,0
@@ -21,7 +21,7 @@ Current state,Input,Next State,Output,happiness,health,hunger,money,your_health
 3,Skip main course and eat chocloate,3,You are not allowed to do this,0,0,0,0,0
 3,Complain about what is on offer and eat nothing,9,Mum explodes!,0,0,0,0,-30
 9,Sleep,10,Zzzzz,0,0,0,0,20
-9,Don't Sleep instead pull an all-nighter looking after Honey,10, You are very tired but it was worth it Honey flopped 10 times!!!,25,0,0,0,-25
+9,Don't Sleep instead pull an all-nighter looking after Honey,10, You are very tired but it was worth it Honey flopped 10 times!!!,25,0,0,0,-30
 10,Go dragon boating,14,you head down to the beach and join your team. While you are out the boat capsizes!,-10,0,30,0,-5
 10,Go to sleep until 12:00,11,Zzzzz,-10,0,20,0,0
 10,Feed Honey,11, She chews quite loudly!,5,0,-25,0,0
@@ -39,3 +39,5 @@ Current state,Input,Next State,Output,happiness,health,hunger,money,your_health
 15,eat main course,16,it was tasty,0,0,10,0,0
 15,feed honey instead of yourelf,16,she looks overjoyed,20,0,-30,0,0
 15,have a beer for dinner,16,…..(alcoholic),-10,0,10,0,-10
+16,Go to sleep ,17,Zzzzz,0,0,0,0,20
+16,watch a movie with honey until 4:00,17,you are tired but honey enjoyed the movie.,25,0,0,0,-30

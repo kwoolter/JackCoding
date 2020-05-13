@@ -41,7 +41,7 @@ class StateTransitionFactory:
                 health = int(row.get("health"))
                 hunger = int(row.get("hunger"))
                 money = int(row.get("money"))
-                your_health = int(row.get("money"))
+                your_health = int(row.get("your_health"))
 
 
                 if current_state not in self._state_transitions.keys():
@@ -197,7 +197,7 @@ def main():
     total_money = 1000
     total_your_health = 100
     loop = True
-    score_states=[0, 10,16]
+    score_states=[0, 10,17]
     while loop is True:
 
         # Print the details of the current state
@@ -206,7 +206,9 @@ def main():
         if current_state_id in score_states:
             print("happiness: {0}\nhealth: {1}\nhunger: {2}\nmoney: {3}\nyour health: {4}".format(total_happiness, total_health, total_hunger, total_money, total_your_health))
         x=input()
-
+        if total_your_health <= 0:
+            print("your health reached a dire state and you died")
+            break
         # What are the available options from the current state?
         available_inputs = state_transitions.get_transitions_for_state(current_state_id)
 
