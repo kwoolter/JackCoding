@@ -103,7 +103,8 @@ def pick(object_type: str, objects: list, auto_pick: bool=False):
             if 0 < choice <= choices:
                 selected_object = objects[choice -1]
             elif choice == (choices + 1):
-                raise (Exception("You cancelled. No %s selected" % object_type))
+                #raise (Exception("You cancelled. No %s selected" % object_type))
+                break
             else:
                 print("Invalid choice '%i' - try again." % choice)
         else:
@@ -148,7 +149,7 @@ def main():
             break
 
         print("{0}".format(str(current_state.description)))
-        
+
         if current_state_id in score_states:
             print("happiness: {0}\nhealth: {1}\nhunger: {2}\nmoney: {3}\nyour health: {4}".format(total_happiness, total_health, total_hunger, total_money, total_your_health))
         x=input()
