@@ -40,7 +40,7 @@ class StateTransitionFactory:
     def get_transitions_for_state(self, state_id : str):
 
         if state_id in self.transitions.index:
-            transitions = self.transitions.loc[state_id]
+            transitions = self.transitions[self.transitions.index == state_id]
         else:
             transitions = None
 
@@ -117,11 +117,6 @@ from pathlib import Path
 
 def main():
 
-    print("It is your job to look after Honey Bunny for a week.")
-    x = input()
-    print("If she is happy when I get back you will get a nice reward!")
-    x=input()
-
     file_name = Path("./")
 
     # Load in thh state transitions
@@ -137,7 +132,7 @@ def main():
     total_money = 1000
     total_your_health = 100
     loop = True
-    score_states=[0, 10,16]
+    score_states=[1, 10,16]
 
     while loop is True:
 
@@ -148,7 +143,7 @@ def main():
             print(f'State {current_state_id} not found')
             break
 
-        print("{0}".format(str(current_state.description)))
+        print("{0} - {1}".format(current_state.name, current_state.description))
 
         if current_state_id in score_states:
             print("happiness: {0}\nhealth: {1}\nhunger: {2}\nmoney: {3}\nyour health: {4}".format(total_happiness, total_health, total_hunger, total_money, total_your_health))
@@ -168,7 +163,7 @@ def main():
             available_inputs = list(available_transitions["Input"])
 
             # Present valid list of inputs and ask user to pick one
-            result = pick("Input",available_inputs,auto_pick=True)
+            result = pick("Input",available_inputs,auto_pick=False)
 
             if result is not None:
 

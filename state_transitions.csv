@@ -1,43 +1,44 @@
 Current state,Input,Next State,Output,happiness,health,hunger,money,your_health
-2,Ignore the rabbit,6,The rabbit looks hungry,-10,0,20,0,0
+0,Ready to play?,1,If she is happy when I get back you will get a nice reward!,50,100,10,1000,100
+1,Do some coding,2,The rabbit ignores you but you do not care,0,0,0,0,0
+1,Drink some wine,2,The rabbit ignores you but you do not care,0,0,0,0,-10
+1,Play Minecraft,2,The rabbit ignores you but you do not care,0,0,0,0,0
+1,Play Nintendo on the sofa (with honey),4,The rabbit jumps off; chaos!,10,0,0,0,0
+1,Put on some loud music,2,The rabbit hates this,-25,0,0,0,0
+1,Take the paddle board down to the beach,2,Rabbits cannot swim!,0,0,0,0,0
+1,Watch some TV,2,The rabbit ignores you but you do not care,0,0,0,0,0
 2,Feed the rabbit,6,The rabbit stops gnawing at its cage,5,0,-25,0,0
+2,Ignore the rabbit,6,The rabbit looks hungry,-10,0,20,0,0
 2,Let the rabbit run around,6,The rabbit runs around and then escapes,10,0,20,0,0
-0,Put on some loud music,2,The rabbit hates this,-25,0,0,0,0
-0,Play Nintendo on the sofa (with honey),4,The rabbit jumps off; chaos!,10,0,0,0,0
-0,Drink some wine,2,The rabbit ignores you but you do not care,0,0,0,0,-10
-4,Try and catch the rabbit,2,After 10 minutes of running around you catch it,-15,0,0,0,0
-4,Coax the rabbit back into its cage with a carrot,2,A fresh carrot does the job,0,0,-10,0,0
-4,Coax the rabbit back into its cage with a big stick,2,You brandish a big stick (accidently poke honey) and scream,-15,-5,0,0,0
-5,Do nothing,2,Relax,0,0,0,0,0
-0,Watch some TV,2,The rabbit ignores you but you do not care,0,0,0,0,0
-0,Play Minecraft,2,The rabbit ignores you but you do not care,0,0,0,0,0
-0,Do some coding,2,The rabbit ignores you but you do not care,0,0,0,0,0
-0,Take the paddle board down to the beach,2,Rabbits cannot swim!,0,0,0,0,0
-6,pour yourself a Gweilo,3,The rabbit ignores you but you do not care,0,0,0,0,-5
-6,pour yourself a cider,3,The rabbit ignores you but you do not care,0,0,0,0,-5
-6,eat some Dorritos,3,Mmmm,0,0,0,0,25
-3,Skip dinner and feed honey instead,9,you sacrific your meal for honey!,15,0,-20,0,-20
-3,Eat main course,9,Good work,0,0,0,0,25
-3,Skip main course and eat chocloate,3,You are not allowed to do this,0,0,0,0,0
 3,Complain about what is on offer and eat nothing,9,Mum explodes!,0,0,0,0,-30
-9,Sleep,10,Zzzzz,0,0,0,0,20
+3,Eat main course,9,Good work,0,0,0,0,25
+3,Skip dinner and feed honey instead,9,you sacrific your meal for honey!,15,0,-20,0,-20
+3,Skip main course and eat chocloate,3,You are not allowed to do this,0,0,0,0,0
+4,Coax the rabbit back into its cage with a big stick,2,You brandish a big stick (accidently poke honey) and scream,-15,-5,0,0,0
+4,Coax the rabbit back into its cage with a carrot,2,A fresh carrot does the job,0,0,-10,0,0
+4,Try and catch the rabbit,2,After 10 minutes of running around you catch it,-15,0,0,0,0
+5,Do nothing,2,Relax,0,0,0,0,0
+6,eat some Dorritos,3,Mmmm,0,0,0,0,25
+6,pour yourself a cider,3,The rabbit ignores you but you do not care,0,0,0,0,-5
+6,pour yourself a Gweilo,3,The rabbit ignores you but you do not care,0,0,0,0,-5
 9,Don't Sleep instead pull an all-nighter looking after Honey,10, You are very tired but it was worth it Honey flopped 10 times!!!,25,0,0,0,-30
+9,Sleep,10,Zzzzz,0,0,0,0,20
+10,Feed Honey,11, She chews quite loudly!,5,0,-25,0,0
 10,Go dragon boating,14,you head down to the beach and join your team. While you are out the boat capsizes!,-10,0,30,0,-5
 10,Go to sleep until 12:00,11,Zzzzz,-10,0,20,0,0
-10,Feed Honey,11, She chews quite loudly!,5,0,-25,0,0
-11,Go Kayaking with The Rabbit; she goes in a clear drybag,13, you and Honey head out to sea! She falls in and your 'dry' bag doesn't work. Time to go to the vet!,-25,-50,0,0,0
-11,Share an apple with honey,12, honey loves sharing the apple with you!,34,0,-20,0,10
-11,Open a bottle of wine,12, you alcoholic!,0,0,0,0,-10
 11,Feed honey crisps (you like them why can't she?),13, Honey chokes on the crisp; time to go the the vet!,-25,-50,0,0,0
-13,pay £334 to make honey better,12,honey didn't like it much but she is good-as-new!,-30,12,0,-334,0
-13,don't pay the bill you don't have enough money,66,honey died,-30,-999,0,0,0
-12,get honey out,15,honey runs around for a while doing lots of binkies ,15,0,0,0,0
+11,Go Kayaking with The Rabbit; she goes in a clear drybag,13, you and Honey head out to sea! She falls in and your 'dry' bag doesn't work. Time to go to the vet!,-25,-50,0,0,0
+11,Open a bottle of wine,12, you alcoholic!,0,0,0,0,-10
+11,Share an apple with honey,12, honey loves sharing the apple with you!,34,0,-20,0,10
 12,eat doritos,15,mmm,-5,0,0,0,25
+12,get honey out,15,honey runs around for a while doing lots of binkies ,15,0,0,0,0
 12,pour yourself a cider,15,soo good.... (alcoholic),-5,0,0,0,-10
+13,don't pay the bill you don't have enough money,66,honey died,-30,-999,0,0,0
+13,pay $334 to make honey better,12,honey didn't like it much but she is good-as-new!,-30,12,0,-334,0
 14,feed honey (you haven't fed her all day!,12,she looks happy after waiting the whole day!,5,0,-10,0,0
 14,have a shower you need to clean up after the capsize,12,honey is dying to eat,-10,-15,20,0,0
 15,eat main course,16,it was tasty,0,0,10,0,0
 15,feed honey instead of yourelf,16,she looks overjoyed,20,0,-30,0,0
-15,have a beer for dinner,16,…..(alcoholic),-10,0,10,0,-10
+15,have a beer for dinner,16,...(alcoholic),-10,0,10,0,-10
 16,Go to sleep ,17,Zzzzz,0,0,0,0,20
 16,watch a movie with honey until 4:00,17,you are tired but honey enjoyed the movie.,25,0,0,0,-30

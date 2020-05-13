@@ -1,5 +1,6 @@
 ID,Name,Description
-0,Day 1 morning,Monday morning
+0,Get ready,It is your job to look after Honey Bunny for a week.
+1,Day 1 morning,Monday morning
 2,Day 1 lunch time,Lunchtime on Monday
 3,Day 1 Evening,Evening on Monday
 4,Emergency! Escaped rabbit,The rabbit has escaped
@@ -13,6 +14,6 @@ ID,Name,Description
 9,Bedtime,Curl up in bed and sleep
 15,Day 2 evening,Tuesday evening
 16,Day2 sleep,Tuesday night
-17,Day 3 morning,Wednessday morning
-18,Day 3 lunch,Wednessday lunch
+17,Day 3 morning,Wednesday morning
+18,Day 3 lunch,Wednesday lunch
 19,Day3,
