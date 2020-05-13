@@ -26,13 +26,12 @@ class StateTransitionFactory:
 
     # Returns the state with the specified ID
     def get_state(self, id):
-        s = self.states.loc[id]
-        return State(id, s["Name"], s["Description"])
 
-        # if id not in self.states:
-        #     return None
-        # else:
-        #     return self.states[id]
+        if id not in self.states.index:
+            return None
+        else:
+            s = self.states.loc[id]
+            return State(id, s["Name"], s["Description"])
 
     def print(self):
         for state in self._states.values():
@@ -138,11 +137,18 @@ def main():
     total_your_health = 100
     loop = True
     score_states=[0, 10,16]
+
     while loop is True:
 
         # Print the details of the current state
         current_state = state_transitions.get_state(current_state_id)
+
+        if current_state is None:
+            print(f'State {current_state_id} not found')
+            break
+
         print("{0}".format(str(current_state.description)))
+        
         if current_state_id in score_states:
             print("happiness: {0}\nhealth: {1}\nhunger: {2}\nmoney: {3}\nyour health: {4}".format(total_happiness, total_health, total_hunger, total_money, total_your_health))
         x=input()
@@ -152,14 +158,11 @@ def main():
 
         # If there are no options then we have reached an end state so time to finish
         if available_transitions is None:
+            print("no available choices for this state")
             loop = False
 
         # Otherwise...
         else:
-
-            # for key, value in available_inputs.items():
-            #     next_state, output = value
-            #     print("Input {0}: Next state {1}, output {2}".format(key, next_state, output))
 
             available_inputs = list(available_transitions["Input"])
 
@@ -170,10 +173,9 @@ def main():
 
                 # Change state
                 selected_transition = available_transitions.loc[available_transitions["Input"] == result]
-                #print(selected_transition)
-                selected_transition = selected_transition.to_dict('records')[0]
 
-                #print(selected_transition)
+                selected_transition = selected_transition.to_dict('index')[current_state_id]
+
 
                 current_state_id = selected_transition["Next State"]
                 happiness = selected_transition["happiness"]
