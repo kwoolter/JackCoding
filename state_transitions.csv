@@ -1,5 +1,5 @@
 Current state,Input,Next State,Output,happiness,health,hunger,money,your_health
-0,Ready to play?,1,If she is happy when I get back you will get a nice reward!,50,100,10,1000,100
+0,get ready to play?,1,If she is happy when I get back you will get a nice reward!,50,100,10,1000,100
 1,Do some coding,2,The rabbit ignores you but you do not care,0,0,0,0,0
 1,Drink some wine,2,The rabbit ignores you but you do not care,0,0,0,0,-10
 1,Play Minecraft,2,The rabbit ignores you but you do not care,0,0,0,0,0
@@ -38,7 +38,12 @@ Current state,Input,Next State,Output,happiness,health,hunger,money,your_health
 14,feed honey (you haven't fed her all day!,12,she looks happy after waiting the whole day!,5,0,-10,0,0
 14,have a shower you need to clean up after the capsize,12,honey is dying to eat,-10,-15,20,0,0
 15,eat main course,16,it was tasty,0,0,10,0,0
-15,feed honey instead of yourelf,16,she looks overjoyed,20,0,-30,0,0
+15,feed honey instead of yourself,16,she looks overjoyed,20,0,-30,0,0
 15,have a beer for dinner,16,...(alcoholic),-10,0,10,0,-10
 16,Go to sleep ,17,Zzzzz,0,0,0,0,20
 16,watch a movie with honey until 4:00,17,you are tired but honey enjoyed the movie.,25,0,0,0,-30
+17,Do nothing,18,Relax,0,0,0,0,0
+18,Do nothing,19,Relax,0,0,0,0,0
+19,Do nothing,20,Relax,0,0,0,0,0
+20,Do nothing,21,Relax,0,0,0,0,0
+21,Do nothing,30,Relax,0,0,0,0,0
